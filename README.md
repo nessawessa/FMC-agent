@@ -18,13 +18,15 @@ Features
 
 
 Requirements
-Python 3.9+
+
+- Python 3.9+
 - Pip dependencies:
     pip install pandas openpyxl
 - Access to the RV&S CLI executable in your system PATH.
 - FM&C Modification Template .xlsm file.
 
 Installation
+
 Clone the repo and install dependencies:
   git clone https://github.com/your-org/fmc-automation-agent.git
   cd fmc-automation-agent
