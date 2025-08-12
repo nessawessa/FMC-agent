@@ -27,26 +27,28 @@ Requirements
 
 Installation
 
-    Clone the repo and install dependencies:
+Clone the repo and install dependencies:
 
-  - git clone https://github.com/your-org/fmc-automation-agent.git
-  
-  - cd fmc-automation-agent
-  
-  - pip install -r requirements.txt
+        git clone https://github.com/your-org/fmc-automation-agent.git
+        cd fmc-automation-agent
+        pip install -r requirements.txt
   
 
 Useage
 
 Validate only:
+
     python excel_validator.py "FMC Modification Template.xlsm"
     
 Run all operations:
+
     python cli_runner.py "FMC Modification Template.xlsm"
     
 Dry run (no changes):
+
     python cli_runner.py "FMC Modification Template.xlsm" --dry-run
     
 Run specfic operations:
+
     python cli_runner.py "FMC Modification Template.xlsm" --ops "Create Fail Modes" "Create Causes"
 
