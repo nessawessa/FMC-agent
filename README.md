@@ -1,4 +1,4 @@
-# FM&C Agent
+# FM&C Modifier
 The FM&C Automation Agent is a Python-based command-line tool designed to automate updates to the FM&C Modification Template.xlsm.
 It reads multiple operation-specific sheets, validates structure and data, executes RV&S (Windchill) CLI commands, and logs results back into the same Excel file.
 
