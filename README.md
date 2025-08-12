@@ -29,8 +29,10 @@ Clone the repo and install dependencies:
   git clone https://github.com/your-org/fmc-automation-agent.git
   cd fmc-automation-agent
   pip install -r requirements.txt
+  
 
 Useage
+
 Validate only:
     python excel_validator.py "FMC Modification Template.xlsm"
     
