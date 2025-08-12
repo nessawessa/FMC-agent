@@ -1,0 +1,70 @@
+# Legacy Fail Mode Creation Instructions
+
+This text file contains the legacy process for creating fail modes.
+It is preserved for reference and historical context.
+
+## Manual Process (Before Automation)
+
+1. Open FM&C Template workbook
+2. Navigate to "Create Fail Modes" sheet
+3. For each fail mode to create:
+   a. Verify Functional System ID exists in system
+   b. Generate unique Fail Mode ID using pattern: FM-YYYYMMDD-NNNN
+   c. Fill in Name and Description fields
+   d. Execute RV&S CLI command manually:
+      ```
+      im createissue --type="Fail Mode" 
+                     --field="Functional System ID"="FS-001" 
+                     --field="Name"="Engine Overheat" 
+                     --field="Description"="Engine temperature exceeds safe operating limits"
+      ```
+   e. Copy generated ID back to spreadsheet
+   f. Mark row as "Completed" in Agent Status column
+
+## Common Issues (Legacy)
+
+- Typos in manual command entry
+- Forgetting to update Agent Status
+- ID conflicts due to manual generation
+- Missing cross-references
+- Inconsistent naming conventions
+
+## Automation Benefits
+
+The new FM&C Agent eliminates these manual steps:
+- Automatic command generation from templates
+- Consistent ID extraction from RV&S output
+- Automatic status tracking
+- Validation before execution
+- Comprehensive audit trail
+
+## Command Template Evolution
+
+Legacy (manual):
+```bash
+im createissue --type="Fail Mode" --field="Functional System ID"="FS-001" --field="Name"="Engine Overheat" --field="Description"="Engine temperature exceeds safe operating limits"
+```
+
+Automated (templated):
+```bash
+im createissue --type='Fail Mode' --field='Functional System ID'='{Functional System ID}' --field='Name'='{Fail Mode Name}' --field='Description'='{Fail Mode Description}'
+```
+
+## Migration Notes
+
+When migrating from legacy to automated process:
+1. Backup existing workbooks
+2. Validate data format matches new schema
+3. Test with dry-run mode first
+4. Verify Change Log entries are created
+5. Confirm RV&S integration works correctly
+
+## Deprecated Fields
+
+The following fields were used in legacy process but are no longer required:
+- Manual_ID_Counter
+- Legacy_Status_Code
+- Operator_Initials
+- Manual_Entry_Date
+
+These fields are preserved in old workbooks but ignored by the new agent.
