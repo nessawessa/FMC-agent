@@ -27,13 +27,13 @@ Requirements
 
 Installation
 
-Clone the repo and install dependencies:
+    Clone the repo and install dependencies:
 
-  git clone https://github.com/your-org/fmc-automation-agent.git
+  - git clone https://github.com/your-org/fmc-automation-agent.git
   
-  cd fmc-automation-agent
+  - cd fmc-automation-agent
   
-  pip install -r requirements.txt
+  - pip install -r requirements.txt
   
 
 Useage
