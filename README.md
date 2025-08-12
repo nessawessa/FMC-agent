@@ -31,8 +31,12 @@ Clone the repo and install dependencies:
   pip install -r requirements.txt
 
 Useage
-Validate only: python excel_validator.py "FMC Modification Template.xlsm"
-Run all operations: python cli_runner.py "FMC Modification Template.xlsm"
-Dry run (no changes): python cli_runner.py "FMC Modification Template.xlsm" --dry-run
-Run specfic operations: python cli_runner.py "FMC Modification Template.xlsm" --ops "Create Fail Modes" "Create Causes"
+Validate only:
+    python excel_validator.py "FMC Modification Template.xlsm"
+Run all operations:
+    python cli_runner.py "FMC Modification Template.xlsm"
+Dry run (no changes):
+    python cli_runner.py "FMC Modification Template.xlsm" --dry-run
+Run specfic operations:
+    python cli_runner.py "FMC Modification Template.xlsm" --ops "Create Fail Modes" "Create Causes"
 
